@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de TDEE e Macronutrientes</title>
+    <title>Calculadora de Métricas Corporais</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de TDEE e Macronutrientes</h1>
-        <form id="form">
-            <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" required>
+        <form>
+            <div class="form-group">
+                <label for="gender">Gênero:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Masculino</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Feminino</label>
+            </div>
 
-            <label for="altura">Altura (cm):</label>
-            <input type="number" id="altura" required>
+            <div class="form-group">
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age">
+            </div>
 
-            <label for="idade">Idade:</label>
-            <input type="number" id="idade" required>
+            <div class="form-group">
+                <label for="weight">Peso (kg):</label>
+                <input type="number" id="weight" name="weight">
+            </div>
 
-            <label>Gênero:</label>
-            <input type="radio" id="genero_m" name="genero" value="M" checked>
-            <label for="genero_m">Masculino</label>
-            <input type="radio" id="genero_f" name="genero" value="F">
-            <label for="genero_f">Feminino</label>
+            <div class="form-group">
+                <label for="height">Altura (cm):</label>
+                <input type="number" id="height" name="height">
+            </div>
 
-            <label for="nivel_atividade">Nível de Atividade:</label>
-            <select id="nivel_atividade">
-                <option value="sedentario">Sedentário</option>
-                <option value="ligeiramente_ativo">Ligeiramente Ativo</option>
-                <option value="moderadamente_ativo">Moderadamente Ativo</option>
-                <option value="altamente_ativo">Altamente Ativo</option>
-                <option value="extremamente_ativo">Extremamente Ativo</option>
-            </select>
+            <div class="form-group">
+                <label for="activity">Atividade:</label>
+                <select id="activity" name="activity">
+                    <option value="sedentary">Sedentário (trabalho de escritório)</option>
+                    <option value="light">Exercício leve</option>
+                    <option value="moderate">Exercício moderado</option>
+                    <option value="active">Ativo</option>
+                    <option value="very_active">Muito ativo</option>
+                </select>
+            </div>
 
-            <button type="submit">Calcular</button>
+            <div class="form-group">
+                <label for="bodyfat">% de Gordura Corporal (opcional):</label>
+                <input type="number" id="bodyfat" name="bodyfat" value="15">
+            </div>
+
+            <button type="submit">Calcular!</button>
         </form>
-        <div id="resultado"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
