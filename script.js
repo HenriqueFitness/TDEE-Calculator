@@ -49,7 +49,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
     const macrosPorRefeicao = dividirMacrosEmRefeicoes(macros);
 
     const resultado = `
-        TDEE: ${tdee.toFixed(2)} calorias por dia
+        TDEE: ${tdee.toFixed(2)} calorias/dia
         Proteínas por dia: ${macros.proteinas.toFixed(2)} g
         Gorduras por dia: ${macros.gorduras.toFixed(2)} g
         Carboidratos por dia: ${macros.carboidratos.toFixed(2)} g
